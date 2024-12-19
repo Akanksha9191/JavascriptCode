@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="demo"></h1> -->
+<!-- <ul>
+    
+    <li id="l1">List 1</li>
+    <li class="l2">List 2</li>
+    <li class="l2">List 3</li>
+</ul> -->
+
+<!-- For tag -->
+<h1>Heading</h1>
+<p>Paragraph</p>
+<h1>Heading</h1>
+<p>Paragraph</p>
+<h1>Heading</h1>
+<p>Paragraph</p>
+
+<!-- for css -->
+ <button id="btn">Click Me</button>
+
+
+<script>
+    //let val= document.getElementById('l1')
+    //val.innerHTML = 'Hello'
+    //console.log(val)
+    
+    //let val1 = document.getElementsByClassName('l2')
+    //for(let i=0; i<val1.length; i++){
+    //    console.log(val1[i].innerHTML ='world')
+    //}
+   
+
+    ///______________________for tag
+    let val2=document.getElementsByTagName('h1')
+    console.log(val2)
+    for(let a=0; a<val2.length; a++){
+        console.log(val2[a].innerHTML ='Welcome')
+    }
+
+    //___________________________for css
+    let a1= document.getElementById('btn')
+    //a1.style.width='50px'
+    //a1.style.height='200;'
+    //a1.style.background ='red'
+    a1.style.cssText='padding:20px; color:green; background:yellow; font-weight:bold; border:3px dotted green; font-size:20px; margin:70px;'
+
+</script>
+
+</body>
+<!-- <script src="object.js"></script> -->
+</html>

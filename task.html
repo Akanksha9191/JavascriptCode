@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        background-color: red;
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+    }
+    #bg-image{
+        src: url('img1.jpg');
+    }
+  
+</style>
+
+<body>
+    
+
+    <div id="l1"></div>
+
+        <button onclick="btn1()">Yellow</button>
+        <button onclick="btn2()">Green</button>
+        <button onclick="btn3()">Blue</button>
+
+        <!-- <div id="bg-image"></div> -->
+        <img src="./img1.jpg" alt="" id="bg-image">
+        <button onclick="btn()">Click</button>
+
+</body>
+<script>
+    function btn1(){
+        document.getElementById("l1").style.background= "yellow"
+    }
+    function btn2(){
+        document.getElementById('l1').style.background='green'
+    }
+    function btn3(){
+        document.getElementById('l1').style.background='blue'
+    }
+    
+
+    function btn(){
+      // document.getElementById('bg-image').style.backgroundImage="url(img2.jpg)";
+       document.getElementById("bg-image").src = "img2.jpg";
+    }
+    
+
+    
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+JavaScript
+
+>>Two way 
+external
+internal
+
+>>predefine function
+alert()---popup box
+console.log()---debuging
+document.write()--- diplay o/p html page, inline
+
+>>keywords
+var---redefine the define value
+
+(note: not use var , )
+
+
+let ---not redefine
+
+const
+
+>>type
+string
+number
+boolean
+object
+array
+undefined
+typeof

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="task.html" onsubmit="return validation()">
+        <label>Name:</label>
+        <input type="text" name="" id="name" placeholder="Enter your name">
+        <br/><br/>
+        <label>Email:</label>
+        <input type="email" name="" id="email" placeholder="Enter your name">
+        <br/><br/>
+        <label>Contact:</label>
+        <input type="text" name="" id="contact" placeholder="Enter your number">
+        <br/><br/>
+        <label>Password:</label>
+        <input type="password" name="" id="password" placeholder="Enter your Password">
+        <br/><br/>
+        <label>Confirm Password:</label>
+        <input type="password" name="" id="cpassword" placeholder="Enter your name">
+        <br/><br/>
+        
+        <input type="submit" value="Submit Here">
+    </form>
+</body>
+<script>
+    function validation(){
+        let name1 = document.getElementById("name").value
+        let contact1 = document.getElementById("contact").value
+        let password1 = document.getElementById("password").value
+        let confirmpass = document.getElementById("cpassword").value
+        let email1 =document.getElementById("email").value
+        let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        //for filled all input field
+        if(name1 === "" || contact1 === "" || password1 === "" || confirmpass === ""){
+            alert("Please fill this field")
+            return false
+        //for number digit
+        }else if(contact1.length > 10 || contact1.length <10){
+            alert("Please Enter 10 digit Number")
+            return false
+        }
+        //for only number
+        else if(isNaN(contact1)){
+            alert('Only Numbers are allowed')
+            return false
+        }
+        //for match
+        else if(password1 !== confirmpass){
+            alert("Please match your password")
+            return false
+        }
+        else if(!/[A-Za-z]/.test(password1) || !/\d/.test(password1)){
+            alert("Password contain both number or letters")
+            return false
+
+        }
+        //for email
+        else if(!regex.test(email1)){
+            alert("Please Enter valid Email")
+            return false
+
+        }
+       
+        else{
+            return true
+        }
+    }
+</script>
+</html>
